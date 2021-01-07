@@ -1,22 +1,70 @@
-.Container {
-    position: fixed;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
-}
 .Content {
-    background-color: white;
-    position: absolute;
-    top: 20%;
-    left: 15%;
-    width: 60%;
-    padding: 20px;
-    border-radius: 5px;
-    border: 2px solid black;  
+  background-color: rgba(255, 255, 255);
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.BackButton {
+  border-style: none;
+  outline: none;
+  font-size: 20px;
+  height: 45px;
+  padding: 5px;
+  width: 150px;
+}
+.Image {
+  max-width: 100%;
+  max-height: 100vh;
+}
+.BasicInfo {
+  margin-bottom: 20px;
+}
+.UserName {
+  color: blue;
+  text-decoration: underline;
 }
 
-.center {
-    max-width: 100%;
-    max-height: 100vh;
+.Content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 500px) {
+  .ContactInfo {
+    float: left;
+    border-right: 1px solid grey;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+  .ImageContainer {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .Content {
+    top: 5%;
+    left: 10%;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+    width: 80%;
+  }
+
+  .BasicInfo {
+    border-bottom: 1px solid grey;
+    margin-bottom: 20px;
+  }
+  .BackButton {
+    order: 3;
+    align-self: flex-end;
+  }
+  .ImageContainer {
+    margin-right: 10px;
+    text-align: unset;
+  }
 }

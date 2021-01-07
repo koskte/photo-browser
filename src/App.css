@@ -1,0 +1,30 @@
+@media screen and (max-width: 459px) {
+  .ThumbnailsContainer a:nth-child(odd) {
+    margin-right: 5px;
+  }
+}
+.ThumbnailsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5px;
+  max-width: 800px;
+}
+
+.Thumbnail {
+  margin-bottom: 5px;
+}
+
+.PaginationContainer {
+  display: flex;
+  justify-content: center;
+}
+.pagination {
+  z-index: 0;
+}
+@media screen and (min-width: 770px) {
+  .ThumbnailsContainer {
+    margin: auto;
+    margin-top: 5px;
+  }
+}
