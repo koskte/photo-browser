@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const fetchPhotos = async () => {
-      const photoRespone = await fetch(`http://jsonplaceholder.typicode.com/photos`);
+      const photoRespone = await fetch(`https://jsonplaceholder.typicode.com/photos`);
       const photos = await photoRespone.json();
       setPhotos(photos);
       if (photos.length === 0) {

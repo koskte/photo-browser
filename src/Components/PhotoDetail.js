@@ -13,15 +13,15 @@ function PhotoDetail({ location }) {
 
   useEffect(() => {
     const fetchPhotoAlbumAndUser = async () => {
-      const singlePhotoPromise = await fetch(`http://jsonplaceholder.typicode.com/photos${location.pathname}`);
+      const singlePhotoPromise = await fetch(`https://jsonplaceholder.typicode.com/photos${location.pathname}`);
       const singlePhoto = await singlePhotoPromise.json();
       setSinglePhoto(singlePhoto);
 
-      const albumPromise = await fetch(`http://jsonplaceholder.typicode.com/albums/${singlePhoto.albumId}`);
+      const albumPromise = await fetch(`https://jsonplaceholder.typicode.com/albums/${singlePhoto.albumId}`);
       const album = await albumPromise.json();
       setAlbum(album);
 
-      const userPromise = await fetch(`http://jsonplaceholder.typicode.com/users/${album.userId}`);
+      const userPromise = await fetch(`https://jsonplaceholder.typicode.com/users/${album.userId}`);
       const user = await userPromise.json();
       setUser(user);
       setDoneLoading(true);
